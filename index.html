@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esha Arooj | Funnelish & Shopify Expert</title>
+<meta name="description" content="Esha Arooj is a Funnelish and Shopify expert. Landing pages, product pages, checkouts and store setup that convert.">
+<meta property="og:title" content="Esha Arooj | Funnelish & Shopify Expert">
+<meta property="og:description" content="High-converting Funnelish funnels and Shopify stores.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Bungee&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffdf5;--ink:#111;--lime:#c6ff00;--pink:#ff3ea5;--blue:#3d5afe;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--ink:#f5f5f5;--card:#1c1c1c}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Space Grotesk',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,.logo,.big{font-family:'Bungee','Space Grotesk',sans-serif;font-weight:400;line-height:1.05}
+/* loader */
+#loader{position:fixed;inset:0;background:var(--lime);color:#111;display:flex;align-items:center;justify-content:center;z-index:99;font-family:'Bungee',sans-serif;font-size:clamp(28px,6vw,56px);transition:transform .6s ease}
+#loader.done{transform:translateY(-100%)}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:3px solid var(--ink)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:22px;text-decoration:none}
+.logo span{background:var(--pink);color:#fff;padding:0 6px;border-radius:6px}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{text-decoration:none;font-weight:700;font-size:15px}
+nav ul a:hover{background:var(--lime);color:#111}
+#burger{display:none;background:none;border:3px solid var(--ink);border-radius:8px;padding:4px 10px;font-weight:700;color:var(--ink);cursor:pointer}
+@media(max-width:700px){#burger{display:block}nav ul{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 20px;border-bottom:3px solid var(--ink)}nav ul.open{display:flex}}
+/* hero */
+.hero{padding:70px 0 50px;position:relative}
+.tag{display:inline-block;border:3px solid var(--ink);background:var(--lime);color:#111;padding:4px 14px;border-radius:99px;font-weight:700;font-size:14px;margin-bottom:18px}
+.hero h1{font-size:clamp(40px,9vw,96px);margin-bottom:20px}
+.hero h1 em{font-style:normal;background:var(--pink);color:#fff;padding:0 10px;border-radius:10px;display:inline-block;transform:rotate(-2deg)}
+.hero p{max-width:560px;font-size:18px;margin-bottom:28px}
+.btn{display:inline-block;text-decoration:none;font-weight:700;border:3px solid var(--ink);background:var(--lime);color:#111;padding:12px 24px;border-radius:12px;box-shadow:5px 5px 0 var(--ink);transition:.15s}
+.btn:hover{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--ink)}
+.btn.alt{background:var(--card);color:var(--ink);margin-left:10px}
+.stats{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px}
+.stat{border:3px solid var(--ink);background:var(--card);border-radius:14px;padding:12px 20px;box-shadow:5px 5px 0 var(--ink)}
+.stat b{font-family:'Bungee',sans-serif;font-size:26px;display:block}
+.stat span{font-size:13px}
+/* marquee */
+.marquee{background:var(--ink);color:var(--lime);overflow:hidden;white-space:nowrap;border-block:3px solid var(--ink);padding:10px 0}
+.marquee div{display:inline-block;animation:slide 25s linear infinite;font-family:'Bungee',sans-serif;font-size:18px}
+@keyframes slide{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee div{animation:none}html{scroll-behavior:auto}}
+/* sections */
+section{padding:80px 0}
+.label{font-weight:700;color:var(--pink);margin-bottom:6px}
+h2{font-size:clamp(30px,5vw,52px);margin-bottom:12px}
+.sub{max-width:560px;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.card{border:3px solid var(--ink);background:var(--card);border-radius:18px;padding:24px;box-shadow:6px 6px 0 var(--ink)}
+.card .n{font-family:'Bungee',sans-serif;font-size:14px;background:var(--lime);color:#111;display:inline-block;padding:2px 10px;border-radius:99px;border:2px solid var(--ink);margin-bottom:12px}
+.card h3{font-size:20px;margin-bottom:8px}
+.card .price{margin-top:14px;font-weight:700}
+.card:nth-child(2n){background:var(--lime);color:#111}
+.card:nth-child(3n){background:var(--pink);color:#fff}
+.card:nth-child(2n) .n,.card:nth-child(3n) .n{background:#fff}
+/* works */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.filters button{font:inherit;font-weight:700;cursor:pointer;border:3px solid var(--ink);background:var(--card);color:var(--ink);padding:6px 16px;border-radius:99px}
+.filters button.on{background:var(--ink);color:var(--bg)}
+.work{display:block;text-decoration:none;border:3px solid var(--ink);border-radius:18px;overflow:hidden;background:var(--card);box-shadow:6px 6px 0 var(--ink);transition:.15s}
+.work:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink)}
+.thumb{aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;font-family:'Bungee',sans-serif;font-size:32px;color:#111;border-bottom:3px solid var(--ink);background-size:cover;background-position:center}
+.work:nth-child(4n+1) .thumb{background-color:var(--lime)}
+.work:nth-child(4n+2) .thumb{background-color:#ffd2ec}
+.work:nth-child(4n+3) .thumb{background-color:#c9d1ff}
+.work:nth-child(4n+4) .thumb{background-color:#fff176}
+.work .info{padding:16px 18px}
+.work h3{font-size:18px}
+.work p{font-size:14px;opacity:.8}
+.hidden{display:none}
+/* profile */
+.profile{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
+@media(max-width:760px){.profile{grid-template-columns:1fr}}
+.photo{border:3px solid var(--ink);border-radius:22px;box-shadow:8px 8px 0 var(--pink);background:var(--lime);aspect-ratio:1;overflow:hidden;display:flex;align-items:center;justify-content:center;font-family:'Bungee',sans-serif;font-size:90px;color:#111}
+.photo img{width:100%;height:100%;object-fit:cover}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{border:2px solid var(--ink);padding:3px 12px;border-radius:99px;font-size:14px;font-weight:500;background:var(--card)}
+.quotes{margin-top:30px;display:grid;gap:14px}
+.quote{border-left:6px solid var(--pink);padding:6px 16px;background:var(--card)}
+.quote small{display:block;opacity:.7}
+/* contact */
+#contact{background:var(--lime);color:#111;border-top:3px solid var(--ink)}
+#contact .big{font-size:clamp(34px,7vw,80px);margin-bottom:24px}
+#contact .btn{background:#111;color:var(--lime);box-shadow:5px 5px 0 var(--pink)}
+#contact .btn.alt{background:#fff;color:#111}
+footer{padding:26px 0;font-size:14px;text-align:center;border-top:3px solid var(--ink)}
+.reveal{opacity:0;transform:translateY(24px);transition:.6s}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div id="loader">loading... <span id="pct">0</span>%</div>
+
+<header>
+<div class="wrap">
+<nav>
+<a class="logo" href="#top">esha<span>.</span>arooj</a>
+<button id="burger" aria-label="Menu">Menu</button>
+<ul id="menu">
+<li><a href="#services">Services</a></li>
+<li><a href="#works">Works</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+<span class="tag">Open for new projects</span>
+<h1>I build <em>funnels</em> &amp; stores that sell.</h1>
+<p>Hi, I’m Esha. A Funnelish and Shopify expert helping sellers turn clicks into customers with clean landing pages, product pages and checkouts.</p>
+<a class="btn" href="#contact">Hire me</a><a class="btn alt" href="#works">See my work</a>
+<div class="stats">
+<div class="stat"><b>4.8</b><span>Fiverr rating</span></div>
+<div class="stat"><b>128</b><span>Client reviews</span></div>
+<div class="stat"><b>25+</b><span>Funnels built</span></div>
+<div class="stat"><b>4</b><span>Languages</span></div>
+</div>
+</div>
+
+<div class="marquee"><div>FUNNELISH ★ SHOPIFY ★ LANDING PAGES ★ CHECKOUTS ★ FB &amp; IG ADS ★ FUNNELISH ★ SHOPIFY ★ LANDING PAGES ★ CHECKOUTS ★ FB &amp; IG ADS ★&nbsp;</div></div>
+
+<section id="services">
+<div class="wrap">
+<p class="label">(what I do)</p>
+<h2>Services</h2>
+<p class="sub">From a single product page to a full store setup, built fast and built to convert.</p>
+<div class="grid">
+<div class="card reveal"><span class="n">01</span><h3>Funnelish landing pages</h3><p>Product pages, checkouts and upsell flows cloned or designed from scratch, with custom code set up properly.</p><p class="price">From $40</p></div>
+<div class="card reveal"><span class="n">02</span><h3>Shopify store setup</h3><p>Store design, product listings and SEO basics so your shop looks trustworthy and ready for traffic.</p></div>
+<div class="card reveal"><span class="n">03</span><h3>Facebook &amp; Instagram ads</h3><p>Ad account setup and optimisation for Shopify stores to start getting your offer in front of buyers.</p><p class="price">From $70</p></div>
+</div>
+</div>
+</section>
+
+<section id="works" style="padding-top:0">
+<div class="wrap">
+<p class="label">(selected works)</p>
+<h2>Works</h2>
+<p class="sub">A few funnels I’ve built. Click a card to open the live preview.</p>
+<div class="filters" id="filters">
+<button class="on" data-f="all">All</button>
+<button data-f="funnelish">Funnelish</button>
+<button data-f="shopify">Shopify</button>
+<button data-f="checkout">Checkout</button>
+</div>
+<div class="grid" id="workGrid">
+<!-- Replace each href with your real Funnelish preview link, and add a background-image URL to show a screenshot -->
+<a class="work" data-c="funnelish" href="#" target="_blank" rel="noopener"><div class="thumb">Funnel 01</div><div class="info"><h3>Product landing page</h3><p>Funnelish · Landing page</p></div></a>
+<a class="work" data-c="checkout" href="#" target="_blank" rel="noopener"><div class="thumb">Funnel 02</div><div class="info"><h3>One-page checkout</h3><p>Funnelish · Checkout</p></div></a>
+<a class="work" data-c="funnelish" href="#" target="_blank" rel="noopener"><div class="thumb">Funnel 03</div><div class="info"><h3>Offer page with upsell</h3><p>Funnelish · Funnel</p></div></a>
+<a class="work" data-c="shopify" href="#" target="_blank" rel="noopener"><div class="thumb">Store 01</div><div class="info"><h3>Dropshipping store</h3><p>Shopify · Store design</p></div></a>
+<a class="work" data-c="funnelish" href="#" target="_blank" rel="noopener"><div class="thumb">Funnel 04</div><div class="info"><h3>Advertorial page</h3><p>Funnelish · Landing page</p></div></a>
+<a class="work" data-c="checkout" href="#" target="_blank" rel="noopener"><div class="thumb">Funnel 05</div><div class="info"><h3>Checkout with order bump</h3><p>Funnelish · Checkout</p></div></a>
+</div>
+</div>
+</section>
+
+<section id="about" style="padding-top:0">
+<div class="wrap">
+<p class="label">(profile)</p>
+<h2>About me</h2>
+<div class="profile">
+<div class="photo" id="photo">E</div>
+<div>
+<p>I’m Esha, a Level 2 Fiverr seller from Pakistan specialising in Funnelish and Shopify. I care about fast delivery, tidy code and pages that load quickly and make buying easy.</p>
+<p style="margin-top:12px">I speak English, Spanish, German and French, and I usually reply within an hour.</p>
+<div class="chips"><span>Funnelish</span><span>Shopify</span><span>Product listings</span><span>Shopify SEO</span><span>Facebook Ads</span><span>Instagram Ads</span><span>Digital Marketing</span><span>Social Media Marketing</span></div>
+<div class="quotes">
+<div class="quote">“Very quick turn around and sets up the page with the custom codes and everything.”<small>ambzthejack, United States · 5★</small></div>
+<div class="quote">“Good, professional and fast.”<small>matteomadde, Italy · 4★</small></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap">
+<p class="label" style="color:#111">(contact)</p>
+<div class="big">Let’s build your next funnel.</div>
+<a class="btn" href="https://www.fiverr.com/conversations/esha_aruj" target="_blank" rel="noopener">Message me on Fiverr</a>
+<a class="btn alt" href="https://www.fiverr.com/esha_aruj" target="_blank" rel="noopener">View Fiverr profile</a>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Esha Arooj · Funnelish &amp; Shopify Expert</footer>
+
+<script>
+// Loading counter
+(function(){
+  var p=document.getElementById('pct'),l=document.getElementById('loader'),n=0;
+  var t=setInterval(function(){
+    n+=Math.ceil(Math.random()*12);
+    if(n>=100){n=100;clearInterval(t);setTimeout(function(){l.classList.add('done')},250)}
+    p.textContent=n;
+  },60);
+})();
+
+// Mobile menu
+var menu=document.getElementById('menu');
+document.getElementById('burger').onclick=function(){menu.classList.toggle('open')};
+menu.onclick=function(){menu.classList.remove('open')};
+
+// Work filters
+document.getElementById('filters').addEventListener('click',function(e){
+  var b=e.target.closest('button');if(!b)return;
+  document.querySelectorAll('#filters button').forEach(function(x){x.classList.remove('on')});
+  b.classList.add('on');
+  var f=b.dataset.f;
+  document.querySelectorAll('#workGrid .work').forEach(function(w){
+    w.classList.toggle('hidden',f!=='all'&&w.dataset.c!==f);
+  });
+});
+
+// Scroll reveal
+var io=new IntersectionObserver(function(es){
+  es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:.15});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+// Optional: use your photo. Put profile.jpg next to index.html and uncomment:
+// document.getElementById('photo').innerHTML='<img src="profile.jpg" alt="Esha Arooj">';
+</script>
+</body>
+</html>
